@@ -1,0 +1,19 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified" targetNamespace="http://localhost:8082/ws/distance">
+    <xs:element name="RouteRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="node" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="RouteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="shortest-route" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
