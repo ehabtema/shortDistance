@@ -17,7 +17,6 @@ Maven 3.0+
 ## Build and Run
 * Clone the project into a new folder of your choice  
 git clone https://github.com/ehabtema/shortDistance.git
-* 'mvn clean compile' - to generate the SOAP objects  
 * 'mvn spring-boot:run' - to build and run the project
 
 ## Unit Tests
