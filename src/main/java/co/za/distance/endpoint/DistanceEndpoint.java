@@ -16,10 +16,14 @@ public class DistanceEndpoint {
 
     private static final String NAMESPACE_URI = "http://localhost:8082/ws/distance";
     private Distance distance;
+    private Planet earth;
 
     @Autowired
     public DistanceEndpoint(Distance distanceCalculator) {
         this.distance = distanceCalculator;
+        earth = new Planet();
+        earth.setPlanetNode(DistanceConstants.START_PLANET_NODE);
+        earth.setPlanetName(DistanceConstants.START_PLANET_NAME);
     }
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "RouteRequest")
@@ -29,9 +33,6 @@ public class DistanceEndpoint {
         RouteResponse response = new RouteResponse();
 
         distance.init();
-        Planet earth = new Planet();
-        earth.setPlanetNode(DistanceConstants.START_PLANET_NODE);
-        earth.setPlanetName(DistanceConstants.START_PLANET_NAME);
         distance.calculateShortDistance(earth);
         response.getShortestRoute().clear();
         response.getShortestRoute().addAll(distance.getShortDistRouteToPlanet(request.getNode()));
