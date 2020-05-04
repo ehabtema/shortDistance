@@ -11,6 +11,9 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
+/**
+ * Short distance route SOAP service endpoint
+ */
 @Endpoint
 public class DistanceEndpoint {
 

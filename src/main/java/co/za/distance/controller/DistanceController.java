@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * Short distance route REST service
+ */
+
 @RestController
 @RequestMapping("/distance")
 public class DistanceController {

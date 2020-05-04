@@ -123,6 +123,7 @@ public class Distance {
      * Calculate short distance of all planets from the start planet.
      */
     public void calculateShortDistance(Planet start) {
+        //TODO Update the algorithm to take into account traffic info
         shortDist.put(start, 0d);
         unvisited.add(start);
         while(unvisited.size() != 0) {

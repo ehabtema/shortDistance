@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Route REST service
+ */
+
 @RestController
 @RequestMapping ("/routes")
 public class RouteController {
